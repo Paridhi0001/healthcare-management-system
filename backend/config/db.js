@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/healthcare_system');
+    const conn = await mongoose.connect(process.env.MONGO_URI || process.env.MONGODB_URI || 'mongodb://localhost:27017/healthcare_system');
     console.log(`MongoDB Connected: ${conn.connection.host}`);
     
     // Run self-healing cleanup for orphaned profiles
