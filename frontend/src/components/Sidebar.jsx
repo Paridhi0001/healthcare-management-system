@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
-import { LogOut, Activity } from 'lucide-react';
+import { LogOut, Activity, Heart } from 'lucide-react';
 
 const Sidebar = ({ tabs, activeTab, setActiveTab }) => {
   const { logout } = useAuth();
@@ -9,7 +9,10 @@ const Sidebar = ({ tabs, activeTab, setActiveTab }) => {
     <aside className="sidebar">
       {/* Brand logo container */}
       <div style={{ padding: '0.5rem 0.5rem 1.5rem 0.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem', borderBottom: '1px solid var(--border-color)', marginBottom: '1.5rem' }}>
-        <Activity size={32} style={{ color: 'var(--primary-color)' }} />
+        <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', width: 36, height: 36 }}>
+          <Activity size={32} style={{ color: 'var(--primary-color)' }} />
+          <Heart size={14} style={{ color: '#ef4444', fill: '#ef4444', position: 'absolute', top: 0, right: 0 }} />
+        </div>
         <span style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
           Medi<span style={{ color: 'var(--primary-color)' }}>Sync</span>
         </span>

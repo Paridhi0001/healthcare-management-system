@@ -558,7 +558,10 @@ const PatientDashboard = () => {
       {/* 1. Navbar Clean - Exactly matching layout headers */}
       <nav className="navbar-clean">
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <Activity size={32} style={{ color: 'var(--primary-color)' }} />
+          <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', width: 36, height: 36 }}>
+            <Activity size={32} style={{ color: 'var(--primary-color)' }} />
+            <Heart size={14} style={{ color: '#ef4444', fill: '#ef4444', position: 'absolute', top: 0, right: 0 }} />
+          </div>
           <span style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
             Medi<span style={{ color: 'var(--primary-color)' }}>Sync</span>
           </span>
