@@ -10,7 +10,7 @@ dotenv.config();
 
 const runTest = async () => {
   try {
-    const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/healthcare_system';
+    const mongoUri = process.env.MONGO_URI || process.env.MONGODB_URI || 'mongodb://localhost:27017/healthcare_system';
     console.log(`Connecting to database for seeding mock data: ${mongoUri}`);
     await mongoose.connect(mongoUri);
 
