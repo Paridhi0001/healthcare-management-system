@@ -1,14 +1,8 @@
 const express = require('express');
 const cors = require('cors');
-const dotenv = require('dotenv');
-const connectDB = require('./config/db');
+const mongoose = require('mongoose');
 const { errorHandler } = require('./middleware/errorMiddleware');
-
-// Load env configurations
-dotenv.config();
-
-// Connect to MongoDB
-connectDB();
+require('dotenv').config(); // This loads the variables from your .env file
 
 const app = express();
 
@@ -31,7 +25,17 @@ app.get('/health', (req, res) => {
 // Exception Interceptor Middleware
 app.use(errorHandler);
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Healthcare Management Server listening on port ${PORT} in ${process.env.NODE_ENV || 'development'} mode`);
-});
+// Grab the URI from process.env
+const dbURI = process.env.MONGO_URI;
+
+// Connect to MongoDB Atlas
+mongoose.connect(dbURI)
+  .then(() => {
+    console.log('Successfully connected to MongoDB Atlas (campus-marketplace)!');
+    // Start your server only after the database connection is successful
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+  })
+  .catch((err) => {
+    console.error('Database connection error:', err.message);
+  });
