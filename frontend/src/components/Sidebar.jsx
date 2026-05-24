@@ -8,13 +8,13 @@ const Sidebar = ({ tabs, activeTab, setActiveTab }) => {
   return (
     <aside className="sidebar">
       {/* Brand logo container */}
-      <div style={{ padding: '0.5rem 0.5rem 1.5rem 0.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem', borderBottom: '1px solid var(--border-color)', marginBottom: '1.5rem' }}>
+      <div style={{ padding: '0.5rem 0.5rem 1.5rem 0.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem', borderBottom: '1px solid rgba(255, 255, 255, 0.12)', marginBottom: '1.5rem' }}>
         <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center', width: 36, height: 36 }}>
-          <Activity size={32} style={{ color: 'var(--primary-color)' }} />
+          <Activity size={32} style={{ color: '#ffffff' }} />
           <Heart size={14} style={{ color: '#ef4444', fill: '#ef4444', position: 'absolute', top: 0, right: 0 }} />
         </div>
-        <span style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
-          Medi<span style={{ color: 'var(--primary-color)' }}>Sync</span>
+        <span style={{ fontSize: '1.65rem', fontWeight: 800, color: '#ffffff', letterSpacing: '-0.02em' }}>
+          Medi<span style={{ color: '#60a5fa' }}>Sync</span>
         </span>
       </div>
 
@@ -36,11 +36,11 @@ const Sidebar = ({ tabs, activeTab, setActiveTab }) => {
       </nav>
 
       {/* Footer log out shortcut */}
-      <div style={{ marginTop: 'auto', borderTop: '1px solid var(--border-color)', paddingTop: '1rem' }}>
+      <div style={{ marginTop: 'auto', borderTop: '1px solid rgba(255, 255, 255, 0.12)', paddingTop: '1rem' }}>
         <button 
           onClick={logout} 
           className="nav-link" 
-          style={{ color: 'var(--error-color)', display: 'flex', gap: '0.75rem' }}
+          style={{ color: '#f87171', display: 'flex', gap: '0.75rem' }}
         >
           <LogOut size={18} />
           <span>Exit Workspace</span>

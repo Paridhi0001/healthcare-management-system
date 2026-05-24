@@ -86,14 +86,30 @@ body {
 .sidebar {
   width: 270px;
   flex-shrink: 0;
-  border-right: 1px solid var(--border-color);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   padding: 2rem 1.25rem;
   display: flex;
   flex-direction: column;
   height: 100vh;
   position: sticky;
   top: 0;
-  background: #ffffff;
+  background: #1e3a8a; /* Premium deep blue background */
+}
+
+.sidebar .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.sidebar .nav-link:hover {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.15);
+  border-left: 4px solid #60a5fa;
+  border-radius: 4px var(--radius-sm) var(--radius-sm) 4px;
 }
 
 .main-content {
