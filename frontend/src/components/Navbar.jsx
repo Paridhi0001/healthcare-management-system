@@ -6,14 +6,7 @@ const Navbar = () => {
   const { user, logout } = useAuth();
 
   return (
-    <nav className="navbar">
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-        <Activity size={24} style={{ color: 'var(--primary-color)' }} />
-        <span style={{ fontWeight: 800, fontSize: '1.25rem', letterSpacing: '-0.02em' }}>
-          Medi<span style={{ color: 'var(--primary-color)' }}>Sync</span>
-        </span>
-      </div>
-
+    <nav className="navbar" style={{ justifyContent: 'flex-end' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textAlign: 'right' }}>
           <div>

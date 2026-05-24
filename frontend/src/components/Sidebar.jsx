@@ -8,10 +8,10 @@ const Sidebar = ({ tabs, activeTab, setActiveTab }) => {
   return (
     <aside className="sidebar">
       {/* Brand logo container */}
-      <div style={{ padding: '0.5rem 0.5rem 1.5rem 0.5rem', display: 'flex', alignItems: 'center', gap: '0.6rem', borderBottom: '1px solid var(--border-color)', marginBottom: '1.5rem' }}>
-        <Activity size={22} style={{ color: 'var(--primary-color)' }} />
-        <span style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
-          MediSync
+      <div style={{ padding: '0.5rem 0.5rem 1.5rem 0.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem', borderBottom: '1px solid var(--border-color)', marginBottom: '1.5rem' }}>
+        <Activity size={26} style={{ color: 'var(--primary-color)' }} />
+        <span style={{ fontSize: '1.35rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+          Medi<span style={{ color: 'var(--primary-color)' }}>Sync</span>
         </span>
       </div>
 
