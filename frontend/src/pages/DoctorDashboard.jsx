@@ -304,18 +304,33 @@ const DoctorDashboard = () => {
                                 "{apt.notes}"
                               </p>
                             )}
-                            <div style={{ display: 'flex', gap: '0.5rem', marginTop: '1rem', borderTop: '1px solid var(--border-color)', paddingTop: '0.75rem' }}>
+                            <div style={{ display: 'flex', gap: '0.35rem', marginTop: '1rem', borderTop: '1px solid var(--border-color)', paddingTop: '0.75rem', flexWrap: 'wrap' }}>
                               <button 
                                 onClick={() => handleUpdateStatus(apt._id, 'confirmed')}
                                 className="btn btn-primary"
-                                style={{ padding: '0.35rem 0.5rem', fontSize: '0.75rem', flex: 1, backgroundColor: 'var(--info-color)' }}
+                                style={{ 
+                                  padding: '0.35rem 0.4rem', 
+                                  fontSize: '0.7rem', 
+                                  flex: '1 1 70px', 
+                                  backgroundColor: 'var(--info-color)', 
+                                  gap: '4px',
+                                  whiteSpace: 'nowrap',
+                                  justifyContent: 'center'
+                                }}
                               >
                                 <Check size={12} /> Accept
                               </button>
                               <button 
                                 onClick={() => handleUpdateStatus(apt._id, 'cancelled')}
                                 className="btn btn-danger"
-                                style={{ padding: '0.35rem 0.5rem', fontSize: '0.75rem', flex: 1 }}
+                                style={{ 
+                                  padding: '0.35rem 0.4rem', 
+                                  fontSize: '0.7rem', 
+                                  flex: '1 1 70px', 
+                                  gap: '4px',
+                                  whiteSpace: 'nowrap',
+                                  justifyContent: 'center'
+                                }}
                               >
                                 <XCircle size={12} /> Decline
                               </button>
@@ -353,18 +368,33 @@ const DoctorDashboard = () => {
                                 Age: {apt.patient.profile.age} | Sex: {apt.patient.profile.gender}
                               </p>
                             )}
-                            <div style={{ display: 'flex', gap: '0.5rem', marginTop: '1rem', borderTop: '1px solid var(--border-color)', paddingTop: '0.75rem' }}>
+                            <div style={{ display: 'flex', gap: '0.35rem', marginTop: '1rem', borderTop: '1px solid var(--border-color)', paddingTop: '0.75rem', flexWrap: 'wrap' }}>
                               <button 
                                 onClick={() => handleUpdateStatus(apt._id, 'completed')}
                                 className="btn btn-primary"
-                                style={{ padding: '0.35rem 0.5rem', fontSize: '0.75rem', flex: 1, backgroundColor: 'var(--success-color)' }}
+                                style={{ 
+                                  padding: '0.35rem 0.4rem', 
+                                  fontSize: '0.7rem', 
+                                  flex: '1 1 100px', 
+                                  backgroundColor: 'var(--success-color)', 
+                                  gap: '4px',
+                                  whiteSpace: 'nowrap',
+                                  justifyContent: 'center'
+                                }}
                               >
                                 <CheckCircle size={12} /> Complete (EMR)
                               </button>
                               <button 
                                 onClick={() => handleUpdateStatus(apt._id, 'cancelled')}
                                 className="btn btn-danger"
-                                style={{ padding: '0.35rem 0.5rem', fontSize: '0.75rem', flex: 1 }}
+                                style={{ 
+                                  padding: '0.35rem 0.4rem', 
+                                  fontSize: '0.7rem', 
+                                  flex: '1 1 60px', 
+                                  gap: '4px',
+                                  whiteSpace: 'nowrap',
+                                  justifyContent: 'center'
+                                }}
                               >
                                 <XCircle size={12} /> Cancel
                               </button>
