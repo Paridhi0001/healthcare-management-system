@@ -557,20 +557,11 @@ const PatientDashboard = () => {
     <div className="dashboard-frame">
       {/* 1. Navbar Clean - Exactly matching layout headers */}
       <nav className="navbar-clean">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <div style={{ 
-            width: '40px', 
-            height: '40px', 
-            borderRadius: '50%', 
-            backgroundColor: 'var(--primary-color)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center'
-          }}>
-            {/* Heartbeat symbol */}
-            <Activity size={22} color="white" strokeWidth={3} />
-          </div>
-          <span style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>MediSync</span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          <Activity size={32} style={{ color: 'var(--primary-color)' }} />
+          <span style={{ fontSize: '1.65rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+            Medi<span style={{ color: 'var(--primary-color)' }}>Sync</span>
+          </span>
         </div>
 
         {/* Center Pill Navigation */}
