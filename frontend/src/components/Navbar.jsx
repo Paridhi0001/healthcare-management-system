@@ -8,10 +8,10 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       {/* User Profile on the Left */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textAlign: 'left' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', textAlign: 'left' }}>
         <div style={{
-          width: 36,
-          height: 36,
+          width: 44,
+          height: 44,
           borderRadius: '50%',
           backgroundColor: 'var(--bg-tertiary)',
           border: '1px solid var(--border-color)',
@@ -19,11 +19,11 @@ const Navbar = () => {
           alignItems: 'center',
           justifyContent: 'center'
         }}>
-          <User size={16} className="text-secondary" />
+          <User size={20} className="text-secondary" />
         </div>
         <div>
-          <p style={{ fontSize: '0.9rem', fontWeight: 700, margin: 0 }}>{user?.name}</p>
-          <p style={{ fontSize: '0.75rem', color: 'var(--text-secondary)', textTransform: 'uppercase', margin: 0, fontWeight: 600 }}>
+          <p style={{ fontSize: '1.05rem', fontWeight: 700, margin: 0 }}>{user?.name}</p>
+          <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', textTransform: 'uppercase', margin: 0, fontWeight: 600 }}>
             {user?.role}
           </p>
         </div>
