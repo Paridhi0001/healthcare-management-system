@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
-import { LogOut } from 'lucide-react';
+import { LogOut, Activity } from 'lucide-react';
 
 const Sidebar = ({ tabs, activeTab, setActiveTab }) => {
   const { logout } = useAuth();
@@ -8,9 +8,10 @@ const Sidebar = ({ tabs, activeTab, setActiveTab }) => {
   return (
     <aside className="sidebar">
       {/* Brand logo container */}
-      <div style={{ padding: '0.5rem 0.5rem 2rem 0.5rem', textAlign: 'left', borderBottom: '1px solid var(--border-color)', marginBottom: '1.5rem' }}>
-        <span style={{ fontSize: '0.8rem', fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
-          Console Panel
+      <div style={{ padding: '0.5rem 0.5rem 1.5rem 0.5rem', display: 'flex', alignItems: 'center', gap: '0.6rem', borderBottom: '1px solid var(--border-color)', marginBottom: '1.5rem' }}>
+        <Activity size={22} style={{ color: 'var(--primary-color)' }} />
+        <span style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--text-primary)', letterSpacing: '-0.02em' }}>
+          MediSync
         </span>
       </div>
 
